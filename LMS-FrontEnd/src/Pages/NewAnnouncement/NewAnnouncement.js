@@ -58,17 +58,6 @@ const NewAnnouncement = (props) => {
       ":" +
       currentdate.getSeconds();
 
-    if (!subject.trim()) {
-      setError("Invalid Subject");
-      return;
-    } else if (!message.trim() || message.length < 20) {
-      setError("Message should be more length");
-      return;
-    } else if (!edit && !file) {
-      setError("Seleact a valid file to upload");
-      return;
-    }
-
     data.append("details", file);
     data.append("_id", annID ? annID : undefined);
     data.append("edit", edit);

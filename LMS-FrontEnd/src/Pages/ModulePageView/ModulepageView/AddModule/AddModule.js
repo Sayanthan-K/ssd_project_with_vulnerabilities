@@ -57,39 +57,6 @@ const AddModule = (props) => {
   const onSubmitModule = (event) => {
     event.preventDefault();
 
-    if (ModuleCode.trim().length < 6) {
-      setError("please enter 6 digit ModuleCode!!");
-
-      return;
-    } else if (ModuleEnrollmentkey.trim().length < 6) {
-      setError(" please enter 6 digit ModuleEnrollmentkey!!! ");
-      return;
-    } else if (ModuleCode.trim().length > 6) {
-      setError("please enter 6 digit ModuleCode!!! don't enter more than 6");
-      return;
-    } else if (ModuleEnrollmentkey.trim().length > 6) {
-      setError(
-        "please enter 6 digit ModuleEnrollmentkey!!! don't enter more than 6"
-      );
-      return;
-    } else if (ModuleWeekCounts.trim() <= 8) {
-      setError(
-        "please enter 8 - 18 range ModuleWeekCounts !!! don't enter less than 8"
-      );
-      return;
-    } else if (ModuleWeekCounts.trim() >= 18) {
-      setError(
-        "please enter 8 - 18 range ModuleWeekCounts !!! don't enter greater than 18"
-      );
-      return;
-    } else if (ModuleEnrollmentkey === ModuleCode) {
-      setError("please enter different 'ModuleCode' and 'ModuleEnrollmentkey'");
-      return;
-    } else if (!ModuleName.trim()) {
-      setError("invaild ModuleName");
-      return;
-    }
-
     const Moduledata = {
       _id: moduleID ? moduleID : undefined,
       courseID,

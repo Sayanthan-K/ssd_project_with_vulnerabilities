@@ -62,22 +62,6 @@ const AddFaculties = (props) => {
     //   return;
     // }else
 
-    if (!name.trim() ) {
-      setError("invaild facultyname!! ");
-
-      return;
-    } else if (!Incharge.trim()) {
-      setError("please enter facultyIncharge!!!");
-      return;
-    } else if (!facultyid.trim()) {
-      setError("please enter facultyid!!!");
-      return;
-    } else if (facultyid.trim().length < 8) {
-      setError("please enter 8 digit FacultyID");
-
-      return;
-    }
-
     const Facultydata = {
       _id: id ? id : null,
       id: facultyid,

@@ -2,8 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const BodyParser = require("body-parser");
-
-
 const Faculty = require('./routes/Faculty');
 const course = require('./routes/course');
 const Module = require('./routes/Module');

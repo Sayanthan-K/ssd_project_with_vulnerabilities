@@ -61,19 +61,6 @@ const Addcourse = (props) => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    if (!courseName.trim()) {
-      setError("invaild coursename!! ");
-
-      return;
-    } else if (courseID.trim().length < 8) {
-      setError("please enter 8 digit courseID!!!");
-      return;
-    } else if (courseID.trim().length > 8) {
-      setError(
-        "please enter 8 digit courseID!!! don't enter greater than 8 digit"
-      );
-      return;
-    }
     const coursedata = {
       _id: courseid ? courseid : null,
       courseID: courseID,
